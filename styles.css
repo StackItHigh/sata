@@ -101,6 +101,16 @@ nav ul li a:hover {
     width: 80%;
     height: auto;
     filter: drop-shadow(0 0 25px rgba(128, 0, 255, 0.8));
+    animation: logo-glow 6s ease-in-out infinite;
+}
+
+@keyframes logo-glow {
+    0%, 100% {
+        filter: drop-shadow(0 0 25px rgba(128, 0, 255, 0.8));
+    }
+    50% {
+        filter: drop-shadow(0 0 35px rgba(128, 0, 255, 1));
+    }
 }
 
 /* ASCII Title */
@@ -120,6 +130,16 @@ nav ul li a:hover {
     margin-bottom: 30px;
     display: inline-block;
     text-align: left;
+    animation: ascii-glow 5s ease-in-out infinite;
+}
+
+@keyframes ascii-glow {
+    0%, 100% {
+        text-shadow: 0 0 20px rgba(128, 0, 255, 0.9);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(128, 0, 255, 1);
+    }
 }
 
 /* Newspaper Section */
