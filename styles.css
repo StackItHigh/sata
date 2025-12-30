@@ -122,7 +122,7 @@ nav ul li a:hover {
 }
 
 .ascii-title {
-    font-family: Impact, 'Arial Black', Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', monospace;
     font-size: 14px;
     line-height: 1.1;
     color: #bf80ff;
@@ -338,14 +338,15 @@ nav ul li a:hover {
 }
 
 .ascii-banner-text {
-    font-family: 'Courier New', monospace;
-    font-size: 24px;
+    font-family: Impact, 'Arial Black', Arial, Helvetica, sans-serif;
+    font-size: 28px;
     font-weight: bold;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
     color: var(--psychedelic-purple);
     text-shadow: 0 0 15px var(--psychedelic-purple), 0 0 30px var(--psychedelic-purple);
     white-space: nowrap;
     flex-shrink: 0;
+    text-transform: uppercase;
 }
 
 @keyframes ascii-scroll {
