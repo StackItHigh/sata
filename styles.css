@@ -204,7 +204,7 @@ nav ul li a:hover {
     width: 80%;
     height: auto;
     filter: drop-shadow(0 0 20px var(--psychedelic-purple));
-    animation: logoGlow 2s infinite alternate;
+    animation: logoGlow 4s infinite alternate;
 }
 
 @keyframes logoGlow {
@@ -252,7 +252,7 @@ nav ul li a:hover {
         0 0 20px var(--psychedelic-purple),
         0 0 40px var(--accent-pink),
         0 0 80px var(--accent-pink);
-    animation: ascii-glow 2s ease-in-out infinite;
+    animation: ascii-glow 4s ease-in-out infinite;
     margin-bottom: 30px;
     display: inline-block;
     text-align: left;
@@ -425,7 +425,7 @@ nav ul li a:hover {
 
 .image-banner-scroll {
     display: flex;
-    animation: banner-scroll 30s linear infinite;
+    animation: banner-scroll 60s linear infinite;
     width: fit-content;
     gap: 0;
     line-height: 0;
@@ -1164,13 +1164,23 @@ footer {
     }
 }
 
-/* Floating Trippy Elements */
-.floating-mushroom {
-    position: fixed;
+/* Floating Trippy Elements - Top Section Only */
+.floating-mushrooms-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
     pointer-events: none;
     z-index: 50;
-    opacity: 0.15;
-    filter: drop-shadow(0 0 10px var(--psychedelic-purple));
+}
+
+.floating-mushroom {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.12;
+    filter: drop-shadow(0 0 8px var(--psychedelic-purple));
 }
 
 .floating-mushroom img {
@@ -1180,83 +1190,43 @@ footer {
 }
 
 .floating-1 {
-    width: 128px;
-    height: 128px;
+    width: 100px;
+    height: 100px;
     top: 10%;
     left: 3%;
-    animation: float-drift-1 12s ease-in-out infinite, pulse-glow 4s ease-in-out infinite;
+    animation: float-drift-1 20s ease-in-out infinite;
 }
 
 .floating-2 {
-    width: 96px;
-    height: 96px;
-    top: 55%;
+    width: 70px;
+    height: 70px;
+    top: 40%;
     right: 5%;
-    animation: float-drift-2 15s ease-in-out infinite, pulse-glow 5s ease-in-out infinite 1s;
+    animation: float-drift-2 25s ease-in-out infinite;
 }
 
 .floating-3 {
-    width: 80px;
-    height: 80px;
-    bottom: 25%;
+    width: 60px;
+    height: 60px;
+    top: 60%;
     left: 8%;
-    animation: float-drift-3 18s ease-in-out infinite, pulse-glow 6s ease-in-out infinite 2s;
+    animation: float-drift-3 30s ease-in-out infinite;
 }
 
 .floating-4 {
-    width: 160px;
-    height: 160px;
-    top: 30%;
+    width: 120px;
+    height: 120px;
+    top: 20%;
     right: 2%;
-    animation: float-drift-1 20s ease-in-out infinite reverse, pulse-glow 4s ease-in-out infinite;
+    animation: float-drift-1 28s ease-in-out infinite reverse;
 }
 
 .floating-5 {
-    width: 112px;
-    height: 112px;
-    top: 75%;
+    width: 80px;
+    height: 80px;
+    top: 70%;
     left: 2%;
-    animation: float-drift-2 25s ease-in-out infinite reverse, pulse-glow 5s ease-in-out infinite 1.5s;
-}
-
-.floating-6 {
-    width: 144px;
-    height: 144px;
-    bottom: 5%;
-    right: 8%;
-    animation: float-drift-3 22s ease-in-out infinite, pulse-glow 6s ease-in-out infinite 0.5s;
-}
-
-.floating-7 {
-    width: 72px;
-    height: 72px;
-    top: 45%;
-    left: 6%;
-    animation: float-drift-1 16s ease-in-out infinite, pulse-glow 5s ease-in-out infinite 2.5s;
-}
-
-.floating-8 {
-    width: 104px;
-    height: 104px;
-    top: 5%;
-    right: 10%;
-    animation: float-drift-2 19s ease-in-out infinite reverse, pulse-glow 4s ease-in-out infinite 1s;
-}
-
-.floating-9 {
-    width: 88px;
-    height: 88px;
-    bottom: 40%;
-    right: 3%;
-    animation: float-drift-3 14s ease-in-out infinite, pulse-glow 6s ease-in-out infinite 3s;
-}
-
-.floating-10 {
-    width: 136px;
-    height: 136px;
-    top: 85%;
-    left: 12%;
-    animation: float-drift-1 21s ease-in-out infinite reverse, pulse-glow 5s ease-in-out infinite 0.8s;
+    animation: float-drift-2 35s ease-in-out infinite reverse;
 }
 
 @keyframes float-drift-1 {
