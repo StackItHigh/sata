@@ -17,23 +17,7 @@
 }
 
 body {
-    background: 
-        linear-gradient(45deg, #000000 0%, #0a0a0a 90%, #0a1500 95%, #000000 100%),
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 50px,
-            rgba(57, 255, 20, 0.01) 50px,
-            rgba(57, 255, 20, 0.01) 100px
-        ),
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 50px,
-            rgba(57, 255, 20, 0.01) 50px,
-            rgba(57, 255, 20, 0.01) 100px
-        );
-    background-size: 100% 100%, 100px 100px, 100px 100px;
+    background: linear-gradient(135deg, #000000 0%, #0d0015 50%, #000000 100%);
     color: var(--terminal-white);
     min-height: 100vh;
     overflow-x: hidden;
@@ -43,7 +27,7 @@ body {
 
 @keyframes psychedelic-pulse {
     0% { 
-        filter: hue-rotate(0deg) saturate(1.1) brightness(1) contrast(1.07);
+        filter: hue-rotate(0deg) saturate(1.1) brightness(1) contrast(1.08);
         transform: translate(0px, 0px) scale(1) skew(0deg);
     }
     50% { 
@@ -57,47 +41,7 @@ body {
 }
 
 body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 1px,
-            rgba(57, 255, 20, 0.06) 1px,
-            rgba(57, 255, 20, 0.06) 2px,
-            transparent 2px,
-            transparent 3px,
-            rgba(155, 89, 182, 0.04) 3px,
-            rgba(155, 89, 182, 0.04) 4px,
-            transparent 4px,
-            transparent 5px,
-            rgba(0, 255, 255, 0.03) 5px,
-            rgba(0, 255, 255, 0.03) 6px
-        ),
-        repeating-linear-gradient(
-            90deg,
-            rgba(57, 255, 20, 0.03) 0px,
-            rgba(57, 255, 20, 0.03) 1px,
-            transparent 1px,
-            transparent 2px,
-            rgba(155, 89, 182, 0.04) 2px,
-            rgba(155, 89, 182, 0.04) 3px,
-            transparent 3px,
-            transparent 4px,
-            rgba(0, 255, 255, 0.02) 4px,
-            rgba(0, 255, 255, 0.02) 5px,
-            transparent 5px,
-            transparent 6px
-        );
-    pointer-events: none;
-    z-index: 1000;
-    opacity: 0.08;
-    mix-blend-mode: screen;
+    display: none;
 }
 
 @keyframes spore-static {
@@ -116,39 +60,7 @@ body::before {
 }
 
 body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        linear-gradient(
-            to right,
-            transparent 0%,
-            rgba(57, 255, 20, 0.12) 1%,
-            transparent 2%,
-            transparent 3%,
-            rgba(155, 89, 182, 0.10) 4%,
-            transparent 5%,
-            transparent 94%,
-            rgba(0, 255, 255, 0.08) 95%,
-            transparent 96%,
-            transparent 97%,
-            rgba(57, 255, 20, 0.10) 98%,
-            transparent 99%,
-            transparent 100%
-        ),
-        repeating-linear-gradient(
-            45deg,
-            transparent 0px,
-            rgba(57, 255, 20, 0.015) 1px,
-            transparent 2px,
-            transparent 20px
-        );
-    pointer-events: none;
-    z-index: 999;
-    opacity: 0.12;
+    display: none;
 }
 
 @keyframes consciousness-wave {
@@ -163,30 +75,7 @@ body::after {
 }
 
 .matrix-bg::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        repeating-conic-gradient(
-            from 0deg at 25% 25%,
-            transparent 0deg,
-            rgba(57, 255, 20, 0.015) 90deg,
-            transparent 180deg,
-            rgba(155, 89, 182, 0.015) 270deg
-        ),
-        repeating-conic-gradient(
-            from 45deg at 75% 75%,
-            transparent 0deg,
-            rgba(0, 255, 255, 0.015) 90deg,
-            transparent 180deg,
-            rgba(57, 255, 20, 0.015) 270deg
-        );
-    pointer-events: none;
-    z-index: 997;
-    opacity: 0.2;
+    display: none;
 }
 
 @keyframes mycelium-network {
@@ -213,9 +102,8 @@ body::after {
 }
 
 .matrix-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
+    display: none;
+}
     width: 100%;
     height: 100%;
     pointer-events: none;
