@@ -43,7 +43,7 @@ body {
 
 @keyframes psychedelic-pulse {
     0% { 
-        filter: hue-rotate(0deg) saturate(1.1) brightness(1) contrast(1.08);
+        filter: hue-rotate(0deg) saturate(1.1) brightness(1) contrast(1.07);
         transform: translate(0px, 0px) scale(1) skew(0deg);
     }
     50% { 
