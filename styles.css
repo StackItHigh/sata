@@ -39,7 +39,6 @@ body {
     overflow-x: hidden;
     line-height: 1.4;
     position: relative;
-    animation: psychedelic-pulse 0.08s infinite linear;
 }
 
 @keyframes psychedelic-pulse {
@@ -97,7 +96,7 @@ body::before {
         );
     pointer-events: none;
     z-index: 1000;
-    animation: spore-static 0.03s infinite;
+    opacity: 0.08;
     mix-blend-mode: screen;
 }
 
@@ -149,7 +148,7 @@ body::after {
         );
     pointer-events: none;
     z-index: 999;
-    animation: consciousness-wave 2s infinite ease-in-out;
+    opacity: 0.12;
 }
 
 @keyframes consciousness-wave {
@@ -187,7 +186,7 @@ body::after {
         );
     pointer-events: none;
     z-index: 997;
-    animation: mycelium-network 0.15s infinite;
+    opacity: 0.2;
 }
 
 @keyframes mycelium-network {
