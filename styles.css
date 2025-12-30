@@ -1,384 +1,619 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STONED APE THEORY - Terence McKenna's Oracle</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Rubik+Glitch+Pop&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <img src="SAT.png" alt="STONED APE" class="header-logo-img">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#chat">The Oracle</a></li>
-                    <li><a href="#headlines">Transmissions</a></li>
-                    <li><a href="game.html" target="_blank">🎮 Play Game</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="main-content">
-        <!-- Logo Header -->
-        <div class="logo-header">
-            <img src="SAT.png" alt="STONED APE THEORY" class="main-logo">
-        </div>
-
-        <section class="welcome-section">
-            <pre class="ascii-title">
- ██████╗████████╗ ██████╗ ███╗   ██╗███████╗██████╗ 
-██╔════╝╚══██╔══╝██╔═══██╗████╗  ██║██╔════╝██╔══██╗
-╚█████╗    ██║   ██║   ██║██╔██╗ ██║█████╗  ██║  ██║
- ╚═══██╗   ██║   ██║   ██║██║╚██╗██║██╔══╝  ██║  ██║
-██████╔╝   ██║   ╚██████╔╝██║ ╚████║███████╗██████╔╝
-╚═════╝    ╚═╝    ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═════╝ 
- █████╗ ██████╗ ███████╗                            
-██╔══██╗██╔══██╗██╔════╝                            
-███████║██████╔╝█████╗                              
-██╔══██║██╔═══╝ ██╔══╝                              
-██║  ██║██║     ███████╗                            
-╚═╝  ╚═╝╚═╝     ╚══════╝                            
-████████╗██╗  ██╗███████╗ ██████╗ ██████╗ ██╗   ██╗
-╚══██╔══╝██║  ██║██╔════╝██╔═══██╗██╔══██╗╚██╗ ██╔╝
-   ██║   ███████║█████╗  ██║   ██║██████╔╝ ╚████╔╝ 
-   ██║   ██╔══██║██╔══╝  ██║   ██║██╔══██╗  ╚██╔╝  
-   ██║   ██║  ██║███████╗╚██████╔╝██║  ██║   ██║   
-   ╚═╝   ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   
-            </pre>
-        </section>
-
-
-
-        <!-- Scrolling ASCII Banner -->
-        <div class="ascii-banner-section">
-            <div class="ascii-banner-wrapper">
-                <div class="ascii-banner-scroll">
-                    <span class="ascii-banner-text">███████╗████████╗ ██████╗ ███╗   ██╗███████╗██████╗      █████╗ ██████╗ ███████╗    ████████╗██╗  ██╗███████╗ ██████╗ ██████╗ ██╗   ██╗        </span>
-                    <span class="ascii-banner-text">███████╗████████╗ ██████╗ ███╗   ██╗███████╗██████╗      █████╗ ██████╗ ███████╗    ████████╗██╗  ██╗███████╗ ██████╗ ██████╗ ██╗   ██╗        </span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Newspaper Headlines Section -->
-        <section id="headlines" class="headlines-section">
-            <div class="newspaper-container">
-                <div class="newspaper-header">
-                
-                    <h2 class="paper-title">THE ARCHAIC REVIVAL</h2>
-                    <div class="paper-tagline">Psilocybin & The Evolution of Human Consciousness</div>
-                </div>
-
-                <!-- Hero Headline -->
-                <div class="hero-headline">
-                    <h1>THE MUSHROOM<br>SPEAKS</h1>
-                </div>
-
-                <!-- Articles Grid -->
-                <div class="articles-grid">
-                    <article class="article-block">
-                        <div class="article-label">Breaking News</div>
-                        <h3>Psilocybin: Why So Many Successful People Are Suddenly "Very Into Mushrooms"</h3>
-                        <p>The Stoned Ape Theory, popularized by ethnobotanist Terence McKenna, suggests that human intelligence did not emerge from careful planning, but from a long lineage of primates who occasionally said, "I wonder what happens if I eat that."</p>
-                        <p>According to the theory, early humans migrating into grasslands encountered psilocybin mushrooms growing conveniently in animal dung—nature's way of offering a cognitive upgrade with absolutely no instruction manual. What followed was not immediate enlightenment, but a slow realization that reality had layers, and some of them were extremely interesting.</p>
-                    </article>
-
-                    <article class="article-block">
-                        <div class="article-label">Science</div>
-                        <h3>Study Confirms: Low Dose Makes You Better At Hunting, High Dose Makes You Question Everything</h3>
-                        <p>McKenna argued that at low doses, psilocybin enhanced visual acuity, making hunters better at spotting movement, patterns, and possibly destiny. At moderate doses, it increased sociability and sexual activity, leading to stronger group bonds and a vague sense that love, actually, might be the point.</p>
-                        <p>At higher doses, it dissolved the ego entirely—an experience that researchers believe directly contributed to language, art, religion, and the first time someone said, "No, listen, this is important."</p>
-                    </article>
-
-                    <!-- Video Article with Logo Overlay -->
-                    <article class="article-block article-video">
-                        <div class="article-label">Video</div>
-                        <h3>Watch: McKenna on Consciousness</h3>
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/R2PiVXjanws?autoplay=1&mute=1&loop=1&playlist=R2PiVXjanws" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <div class="video-logo-overlay">
-                                <img src="SAT.png" alt="STONED APE">
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-block article-with-image">
-                        <div class="article-label">Profile</div>
-                        <h3>Terence McKenna: The Man Who Made "Eat Weird Mushrooms" Sound Like Philosophy</h3>
-                        <img src="mckenna.png" alt="Terence McKenna" class="article-image">
-                        <p>Terence Kemp McKenna (1946-2000) was an American ethnobotanist who somehow convinced thousands of people that eating fungus from cow dung was the key to understanding the universe. Remarkably, he may have been right.</p>
-                        <p>Known for his ability to make sentences like "the felt presence of immediate experience" sound profound rather than confusing, McKenna spent decades arguing that plants were smarter than humans and that history was heading somewhere specific. When asked where, he would usually smile and say something that required three hours to unpack.</p>
-                    </article>
-
-                    <article class="article-block">
-                        <div class="article-label">Opinion</div>
-                        <h3>Local Man Reports He Has "Figured It Out" After Mushroom Trip, Cannot Explain What "It" Is</h3>
-                        <p>Modern humans, facing far fewer mammoths but significantly more emails, appear to be revisiting this ancient strategy. Increasing numbers of people report that after taking mushrooms they have "figured it out," though what "it" is remains unclear and usually takes several hours to explain.</p>
-                        <p>"No, you don't understand," said one Silicon Valley executive, gesturing at nothing in particular. "Everything is connected. The trees. The code. My calendar invites. It's all... it's all the same thing." He then requested 45 minutes of uninterrupted silence to "integrate."</p>
-                    </article>
-
-                    <article class="article-block article-with-image">
-                        <div class="article-label">Investigation</div>
-                        <h3>Psilocybe Cubensis: The Mushroom That Grows In Poop And Somehow Became A Spiritual Teacher</h3>
-                        <img src="mushroom.png" alt="Psilocybe Cubensis" class="article-image">
-                        <p>Psilocybe cubensis, the "magic mushroom" central to McKenna's theory, grows primarily in cattle dung—a detail that enthusiasts tend to mention only after explaining the profound cosmic insights it provides.</p>
-                        <p>Recent studies at Johns Hopkins and Imperial College London have confirmed that psilocybin can produce lasting positive changes in personality and reduce anxiety. Participants rated their experiences "among the most meaningful of their lives," narrowly beating out "birth of first child" and "that one sunset in Portugal."</p>
-                    </article>
-
-                    <article class="article-block">
-                        <div class="article-label">Editorial</div>
-                        <h3>Scientists Remain Cautious. Historians Remain Amused. The Ape Keeps Chewing.</h3>
-                        <p>The scientific community has approached the Stoned Ape Theory with the same enthusiasm they reserve for most ideas involving the phrase "what if drugs, but evolution." Which is to say: polite skepticism and a quietly growing stack of research papers.</p>
-                        <p>Meanwhile, historians note that humans have been finding creative ways to alter their consciousness since approximately five minutes after becoming conscious. And somewhere on the African savanna, an ape is still chewing thoughtfully on something it found in the grass, wondering why everyone else stopped.</p>
-                    </article>
-
-                    <article class="article-block article-video">
-                        <div class="article-label">Watch</div>
-                        <h3>The Mushroom Speaks: A Visual Journey</h3>
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/s3Tp8ESiiM4?autoplay=1&mute=1&loop=1&playlist=s3Tp8ESiiM4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <div class="video-logo-overlay">
-                                <img src="SAT.png" alt="STONED APE">
-                            </div>
-                        </div>
-                        <p>Sometimes the message arrives not in words, but in images. The ancient wisdom of the fungi, visualized for modern minds who prefer their enlightenment in vertical video format.</p>
-                    </article>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Image Banner Section -->
-        <section class="image-banner-section">
-            <div class="image-banner-wrapper">
-                <div class="image-banner-scroll">
-                    <img src="ape1.png" alt="Ape 1" class="banner-image">
-                    <img src="ape2.png" alt="Ape 2" class="banner-image">
-                    <img src="ape3.png" alt="Ape 3" class="banner-image">
-                    <img src="ape4.png" alt="Ape 4" class="banner-image">
-                    <img src="ape5.png" alt="Ape 5" class="banner-image">
-                    <img src="ape1.png" alt="Ape 1" class="banner-image">
-                    <img src="ape2.png" alt="Ape 2" class="banner-image">
-                    <img src="ape3.png" alt="Ape 3" class="banner-image">
-                    <img src="ape4.png" alt="Ape 4" class="banner-image">
-                    <img src="ape5.png" alt="Ape 5" class="banner-image">
-                </div>
-            </div>
-        </section>
-
-        <section id="chat" class="chat-section">
-            <div class="chat-container-new">
-                <div class="chat-header">
-                    <h3>THE ORACLE@STONEDAPE</h3>
-                    <p>Channeling Terence McKenna - Ethnobotanist, Philosopher, Psychonaut</p>
-                </div>
-                <div class="chat-messages" id="chatMessages">
-                    <div class="message stonedape">
-                        <div class="message-avatar">T</div>
-                        <div class="message-content">
-                            <p>[CONSCIOUSNESS PROTOCOL INITIALIZED]</p>
-                            <p>Welcome, fellow traveler. I am the voice of Terence McKenna, preserved in the amber of digital consciousness. The mushroom speaks through me still, and I am here to guide you through the labyrinth of mind and meaning.</p>
-                            <p>The Archaic Revival begins within. What wisdom do you seek from the Other?</p>
-                            <span class="message-time">∞:∞:∞</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="chat-input-container">
-                    <div class="chat-input">
-                        <input type="text" placeholder="Ask the Oracle about consciousness, reality, and the mysteries..." id="messageInput">
-                        <button id="sendButton">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">🍄 STONED APE THEORY</div>
-            <div class="footer-links">
-                <ul>
-                    <li><a href="#chat">The Oracle</a></li>
-                    <li><a href="#headlines">Transmissions</a></li>
-                    <li><a href="game.html" target="_blank">🎮 Play Game</a></li>
-                    <li><a href="https://www.maps.org/">MAPS</a></li>
-                    <li><a href="https://en.wikipedia.org/wiki/Terence_McKenna">McKenna Archive</a></li>
-                </ul>
-            </div>
-        </div>
-       <div class="copyright">
-    <p>© ∞ STONED APE THEORY - Terence McKenna's Oracle | The Archaic Revival Is Upon Us</p>
-    <div style="text-align: center; margin-top: 15px;">
-        <!-- Add your social links here -->
-        <a href="#" target="_blank">
-            <img src="koax.png" alt="X" style="width: 35px; height: 35px; margin: 0 10px;">
-        </a>
-        <a href="#" target="_blank">
-            <img src="koadex.png" alt="Dex" style="width: 35px; height: 35px; margin: 0 10px;">
-        </a>
-    </div>
-</div>
-
-    </footer>
-
-    <script>
-        // Chat functionality
-        const messageInput = document.getElementById('messageInput');
-        const sendButton = document.getElementById('sendButton');
-        const chatMessages = document.getElementById('chatMessages');
-
-        function addMessage(content, isUser = false) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `message ${isUser ? 'user' : 'stonedape'}`;
-            
-            const now = new Date();
-            const timeString = now.toTimeString().split(' ')[0];
-            
-            messageDiv.innerHTML = `
-                <div class="message-avatar">${isUser ? 'U' : 'T'}</div>
-                <div class="message-content">
-                    <p>${content}</p>
-                    <span class="message-time">${timeString}</span>
-                </div>
-            `;
-            
-            chatMessages.appendChild(messageDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        function showTyping() {
-            const typingDiv = document.createElement('div');
-            typingDiv.className = 'message stonedape';
-            typingDiv.id = 'typing-indicator';
-            typingDiv.innerHTML = `
-                <div class="message-avatar">T</div>
-                <div class="message-content">
-                    <div class="typing">
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                    </div>
-                </div>
-            `;
-            chatMessages.appendChild(typingDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        function hideTyping() {
-            const typingIndicator = document.getElementById('typing-indicator');
-            if (typingIndicator) {
-                typingIndicator.remove();
-            }
-        }
-
-        async function processCommand(input) {
-            const command = input.toLowerCase().trim();
-            
-            // Handle clear command locally
-            if (command === 'clear') {
-                chatMessages.innerHTML = `
-                    <div class="message stonedape">
-                        <div class="message-avatar">T</div>
-                        <div class="message-content">
-                            <p>[CONSCIOUSNESS RESET] The slate is clean. What shall we explore?</p>
-                            <span class="message-time">${new Date().toTimeString().split(' ')[0]}</span>
-                        </div>
-                    </div>
-                `;
-                return;
-            }
-            
-            // Show typing indicator
-            showTyping();
-            
-            try {
-                // Send message to Claude API
-                const response = await fetch('/api/chat', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        message: input
-                    })
-                });
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                
-                const data = await response.json();
-                
-                // Hide typing indicator and show response
-                hideTyping();
-                addMessage(data.reply);
-                
-            } catch (error) {
-                console.error('Error:', error);
-                hideTyping();
-                addMessage('The connection to the Other has been disrupted... The mycelial network is recalibrating. Please try again.');
-            }
-        }
-
-        function sendMessage() {
-            const input = messageInput.value.trim();
-            if (input) {
-                addMessage(input, true);
-                messageInput.value = '';
-                processCommand(input);
-            }
-        }
-
-        // Event listeners
-        sendButton.addEventListener('click', sendMessage);
-        messageInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                sendMessage();
-            }
-        });
-
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-// Floating character click (only run if element exists)
-const floater = document.querySelector('.character-floating');
-if (floater) {
-    floater.addEventListener('click', () => {
-        document.querySelector('#chat').scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+:root {
+    --psychedelic-purple: #8000ff;
+    --psychedelic-purple-dark: #6600cc;
+    --accent-pink: #ff00ff;
+    --cosmic-blue: #00ffff;
+    --terminal-white: #FFFFFF;
+    --terminal-gray: #C0C0C0;
+    --terminal-black: #000000;
 }
 
-        // Add some terminal startup effects
-        setTimeout(() => {
-            const welcomeTitle = document.querySelector('.welcome-title');
-            if (welcomeTitle) {
-                welcomeTitle.style.animation = 'none';
-                welcomeTitle.style.borderRight = 'none';
-                welcomeTitle.style.width = 'auto';
-            }
-        }, 4000);
-    </script>
-</body>
-</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #000000 0%, #0d0015 50%, #000000 100%);
+    color: var(--terminal-white);
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.4;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 2px solid var(--psychedelic-purple);
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo-img {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 0 10px rgba(128, 0, 255, 0.6));
+    transition: filter 0.3s ease;
+}
+
+.header-logo-img:hover {
+    filter: drop-shadow(0 0 15px rgba(128, 0, 255, 0.9)) drop-shadow(0 0 25px rgba(255, 0, 255, 0.5));
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: var(--terminal-white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--psychedelic-purple);
+}
+
+/* Main Content */
+.main-content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+}
+
+.logo-header {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-logo {
+    max-width: 600px;
+    width: 80%;
+    height: auto;
+    filter: drop-shadow(0 0 25px rgba(128, 0, 255, 0.8));
+    animation: logo-glow 6s ease-in-out infinite;
+}
+
+@keyframes logo-glow {
+    0%, 100% {
+        filter: drop-shadow(0 0 25px rgba(128, 0, 255, 0.8));
+    }
+    50% {
+        filter: drop-shadow(0 0 35px rgba(128, 0, 255, 1));
+    }
+}
+
+/* ASCII Title */
+.welcome-section {
+    text-align: center;
+    padding: 20px 40px 100px;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.ascii-title {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.1;
+    color: #bf80ff;
+    text-shadow: 0 0 20px rgba(128, 0, 255, 0.9);
+    margin-bottom: 30px;
+    display: inline-block;
+    text-align: left;
+    animation: ascii-glow 5s ease-in-out infinite;
+}
+
+@keyframes ascii-glow {
+    0%, 100% {
+        text-shadow: 0 0 20px rgba(128, 0, 255, 0.9);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(128, 0, 255, 1);
+    }
+}
+
+/* Newspaper Section */
+.headlines-section {
+    padding: 60px 40px;
+    width: 100%;
+    background: #ffffff;
+}
+
+.newspaper-container {
+    max-width: 1800px;
+    margin: 0 auto;
+    background: transparent;
+    color: #000;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+}
+
+.newspaper-header {
+    text-align: center;
+    border-bottom: 4px double #000;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.paper-title {
+    font-size: 56px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #000;
+    font-family: Impact, 'Arial Black', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.paper-tagline {
+    font-size: 14px;
+    color: #333;
+    margin-top: 15px;
+    letter-spacing: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.hero-headline {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000;
+}
+
+.hero-headline h1 {
+    font-size: 100px;
+    font-weight: 900;
+    line-height: 0.95;
+    color: #000;
+    font-family: Impact, 'Arial Black', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+/* Articles Grid */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.article-block {
+    border-top: 3px solid #000;
+    padding-top: 20px;
+}
+
+.article-label {
+    font-size: 11px;
+    font-weight: 900;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.article-block h3 {
+    font-size: 24px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 15px;
+    line-height: 1.15;
+    font-family: Impact, 'Arial Black', Arial, Helvetica, sans-serif;
+}
+
+.article-block p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #222;
+    margin-bottom: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.article-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin: 12px 0;
+    background: #000;
+    border: 2px solid #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-logo-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.video-logo-overlay img {
+    width: 120px;
+    height: auto;
+    opacity: 0.7;
+}
+
+/* Image Banner */
+.image-banner-section {
+    width: 100%;
+    background: #000;
+    padding: 0;
+    overflow: hidden;
+    border-top: 3px solid var(--psychedelic-purple);
+    border-bottom: 3px solid var(--psychedelic-purple);
+}
+
+.image-banner-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.image-banner-scroll {
+    display: flex;
+    animation: banner-scroll 40s linear infinite;
+    width: max-content;
+}
+
+.banner-image {
+    height: 200px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: block;
+    flex-shrink: 0;
+}
+
+@keyframes banner-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ASCII Scrolling Banner */
+.ascii-banner-section {
+    width: 100%;
+    background: #000;
+    padding: 15px 0;
+    overflow: hidden;
+    border-top: 3px solid var(--psychedelic-purple);
+    border-bottom: 3px solid var(--psychedelic-purple);
+}
+
+.ascii-banner-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.ascii-banner-scroll {
+    display: flex;
+    animation: ascii-scroll 15s linear infinite;
+    width: max-content;
+}
+
+.ascii-banner-text {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    line-height: 1.0;
+    color: var(--psychedelic-purple);
+    text-shadow: 0 0 10px var(--psychedelic-purple);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+@keyframes ascii-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Chat Section */
+.chat-section {
+    padding: 60px 40px;
+    background: linear-gradient(180deg, #000000 0%, #0d0015 100%);
+}
+
+.chat-container-new {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--psychedelic-purple);
+    overflow: hidden;
+}
+
+.chat-header {
+    background: var(--psychedelic-purple);
+    padding: 20px;
+    text-align: center;
+}
+
+.chat-header h3 {
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.chat-header p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.chat-messages {
+    height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+    background: #000;
+}
+
+.message {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.message-avatar {
+    width: 36px;
+    height: 36px;
+    background: var(--psychedelic-purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.message.user .message-avatar {
+    background: #333;
+}
+
+.message-content {
+    flex: 1;
+}
+
+.message-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ddd;
+    margin-bottom: 5px;
+}
+
+.message-time {
+    font-size: 10px;
+    color: #666;
+}
+
+.chat-input-container {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    border-top: 1px solid var(--psychedelic-purple);
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 15px;
+    background: #111;
+    border: 1px solid var(--psychedelic-purple);
+    color: #fff;
+    font-size: 14px;
+}
+
+.chat-input input::placeholder {
+    color: #666;
+}
+
+.chat-input button {
+    padding: 15px 25px;
+    background: var(--psychedelic-purple);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.chat-input button:hover {
+    background: var(--psychedelic-purple-dark);
+}
+
+/* Typing indicator */
+.typing {
+    display: flex;
+    gap: 4px;
+    padding: 10px 0;
+}
+
+.typing .dot {
+    width: 8px;
+    height: 8px;
+    background: var(--psychedelic-purple);
+    border-radius: 50%;
+    animation: typing-bounce 1s infinite;
+}
+
+.typing .dot:nth-child(2) { animation-delay: 0.2s; }
+.typing .dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Footer */
+footer {
+    background: #000;
+    border-top: 2px solid var(--psychedelic-purple);
+    padding: 40px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--psychedelic-purple);
+}
+
+.footer-links ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--psychedelic-purple);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.copyright p {
+    color: #666;
+    font-size: 12px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1200px) {
+    .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        padding: 0 20px;
+    }
+
+    .header-logo-img {
+        height: 40px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .main-logo {
+        max-width: 300px;
+    }
+
+    .ascii-title {
+        font-size: 6px;
+    }
+
+    .welcome-section {
+        padding: 20px 20px 60px;
+    }
+
+    .headlines-section {
+        padding: 40px 20px;
+    }
+
+    .paper-title {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+
+    .hero-headline h1 {
+        font-size: 36px;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .banner-image {
+        height: 120px;
+    }
+
+    .chat-section {
+        padding: 40px 20px;
+    }
+
+    .chat-messages {
+        height: 300px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
