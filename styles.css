@@ -152,81 +152,91 @@ nav ul li a:hover {
 .newspaper-container {
     max-width: 1800px;
     margin: 0 auto;
+    background: transparent;
     color: #000;
+    padding: 0;
+    box-shadow: none;
+    border: none;
 }
 
 .newspaper-header {
     text-align: center;
     border-bottom: 4px double #000;
     padding-bottom: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .paper-title {
-    font-size: 48px;
+    font-size: 56px;
     font-weight: 900;
-    letter-spacing: 8px;
+    letter-spacing: 10px;
     color: #000;
-    font-family: Arial Black, Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
 }
 
 .paper-tagline {
     font-size: 14px;
     color: #333;
-    margin-top: 10px;
-    letter-spacing: 2px;
+    margin-top: 15px;
+    letter-spacing: 3px;
     font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
 }
 
 .hero-headline {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000;
 }
 
 .hero-headline h1 {
-    font-size: 72px;
+    font-size: 80px;
     font-weight: 900;
-    line-height: 1.1;
+    line-height: 1.0;
     color: #000;
-    font-family: Arial Black, Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 /* Articles Grid */
 .articles-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px 40px;
+    gap: 40px;
 }
 
 .article-block {
-    border-top: 2px solid #000;
-    padding-top: 15px;
+    border-top: 3px solid #000;
+    padding-top: 20px;
 }
 
 .article-label {
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 900;
     color: #666;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .article-block h3 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 900;
     color: #000;
-    margin-bottom: 12px;
-    line-height: 1.2;
-    font-family: Arial Black, Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+    line-height: 1.25;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .article-block p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #222;
+    margin-bottom: 12px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
