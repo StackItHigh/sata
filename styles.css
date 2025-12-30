@@ -95,6 +95,7 @@ nav ul li a:hover {
     max-width: 600px;
     width: 80%;
     height: auto;
+    filter: drop-shadow(0 0 15px rgba(128, 0, 255, 0.5));
 }
 
 /* ASCII Title */
@@ -109,7 +110,8 @@ nav ul li a:hover {
     font-family: 'Courier New', monospace;
     font-size: 14px;
     line-height: 1.1;
-    color: var(--psychedelic-purple);
+    color: #fff;
+    text-shadow: 0 0 8px rgba(128, 0, 255, 0.6);
     margin-bottom: 30px;
     display: inline-block;
     text-align: left;
@@ -140,7 +142,7 @@ nav ul li a:hover {
     font-weight: 900;
     letter-spacing: 8px;
     color: #000;
-    font-family: 'Times New Roman', serif;
+    font-family: Arial Black, Arial, Helvetica, sans-serif;
 }
 
 .paper-tagline {
@@ -148,6 +150,7 @@ nav ul li a:hover {
     color: #333;
     margin-top: 10px;
     letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .hero-headline {
@@ -160,7 +163,7 @@ nav ul li a:hover {
     font-weight: 900;
     line-height: 1.1;
     color: #000;
-    font-family: 'Times New Roman', serif;
+    font-family: Arial Black, Arial, Helvetica, sans-serif;
 }
 
 /* Articles Grid */
@@ -182,6 +185,7 @@ nav ul li a:hover {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 8px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .article-block h3 {
@@ -190,7 +194,7 @@ nav ul li a:hover {
     color: #000;
     margin-bottom: 12px;
     line-height: 1.2;
-    font-family: 'Times New Roman', serif;
+    font-family: Arial Black, Arial, Helvetica, sans-serif;
 }
 
 .article-block p {
@@ -198,6 +202,7 @@ nav ul li a:hover {
     line-height: 1.6;
     color: #333;
     margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .article-image {
