@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Space Ape Mushroom Catcher - STONED APE THEORY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch+Pop&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --psychedelic-purple: #8000ff;
+            --accent-pink: #ff00ff;
+            --cosmic-blue: #00ffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            overflow: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+        }
+
+        #gameContainer {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #gameCanvas {
+            display: block;
+            background: linear-gradient(180deg, #000000 0%, #1a0033 50%, #000000 100%);
+        }
+
+        /* Stars background */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 2s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* UI Overlay */
+        #ui {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
+        }
+
+        #score, #level, #lives {
+            font-size: 24px;
+            font-weight: 900;
+            text-shadow: 0 0 10px var(--psychedelic-purple);
+            letter-spacing: 2px;
+        }
+
+        #score span, #level span, #lives span {
+            color: var(--psychedelic-purple);
+        }
+
+        /* Start Screen */
+        #startScreen, #gameOverScreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 200;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #gameOverScreen {
+            display: none;
+        }
+
+        .game-title {
+            font-family: 'Rubik Glitch Pop', cursive;
+            font-size: 48px;
+            color: #fff;
+            text-shadow: 
+                0 0 10px var(--psychedelic-purple),
+                0 0 20px var(--psychedelic-purple),
+                0 0 40px var(--accent-pink);
+            margin-bottom: 20px;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        .game-title-ascii {
+            font-family: 'Courier New', monospace;
+            font-size: 8px;
+            line-height: 1.0;
+            color: #fff;
+            text-shadow: 
+                0 0 10px var(--psychedelic-purple),
+                0 0 20px var(--psychedelic-purple),
+                0 0 40px var(--accent-pink);
+            margin-bottom: 20px;
+            animation: glow 2s ease-in-out infinite;
+            text-align: left;
+            display: inline-block;
+        }
+
+        @keyframes glow {
+            0%, 100% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(30deg); }
+        }
+
+        .game-subtitle {
+            font-size: 18px;
+            color: var(--psychedelic-purple);
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+
+        .instructions {
+            font-size: 16px;
+            color: #ccc;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .instructions span {
+            color: var(--cosmic-blue);
+        }
+
+        .start-btn, .restart-btn, .home-btn {
+            background: var(--psychedelic-purple);
+            color: #fff;
+            border: none;
+            padding: 20px 50px;
+            font-size: 24px;
+            font-weight: 900;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .start-btn:hover, .restart-btn:hover, .home-btn:hover {
+            box-shadow: 0 0 30px var(--psychedelic-purple);
+            transform: scale(1.05);
+        }
+
+        .home-btn {
+            background: transparent;
+            border: 2px solid var(--psychedelic-purple);
+            font-size: 16px;
+            padding: 15px 30px;
+        }
+
+        .final-score {
+            font-size: 72px;
+            font-weight: 900;
+            color: var(--psychedelic-purple);
+            text-shadow: 0 0 20px var(--psychedelic-purple);
+            margin: 20px 0;
+        }
+
+        .high-score {
+            font-size: 24px;
+            color: var(--accent-pink);
+            margin-bottom: 30px;
+        }
+
+        /* Power-up indicators */
+        #powerUpIndicator {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18px;
+            font-weight: 900;
+            color: var(--cosmic-blue);
+            text-shadow: 0 0 10px var(--cosmic-blue);
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        #powerUpIndicator.active {
+            opacity: 1;
+            animation: pulse 0.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.1); }
+        }
+
+        /* Back button */
+        #backBtn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 150;
+            background: transparent;
+            border: 2px solid var(--psychedelic-purple);
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        #backBtn:hover {
+            background: var(--psychedelic-purple);
+            box-shadow: 0 0 20px var(--psychedelic-purple);
+        }
+
+        /* Mobile controls */
+        #mobileControls {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            justify-content: center;
+            gap: 20px;
+            z-index: 100;
+        }
+
+        .mobile-btn {
+            width: 80px;
+            height: 80px;
+            background: rgba(128, 0, 255, 0.3);
+            border: 3px solid var(--psychedelic-purple);
+            border-radius: 50%;
+            color: #fff;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .mobile-btn:active {
+            background: rgba(128, 0, 255, 0.6);
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 768px) {
+            #mobileControls {
+                display: flex;
+            }
+
+            .game-title {
+                font-size: 32px;
+            }
+
+            .game-title-ascii {
+                font-size: 4px;
+                line-height: 1.0;
+            }
+
+            #score, #level, #lives {
+                font-size: 16px;
+            }
+
+            .instructions {
+                font-size: 14px;
+            }
+        }
+
+        @media (pointer: coarse) {
+            #mobileControls {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <!-- Stars Background -->
+        <div class="stars" id="stars"></div>
+
+        <!-- Game Canvas -->
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- UI -->
+        <div id="ui">
+            <div id="score">SCORE: <span>0</span></div>
+            <div id="level">LEVEL: <span>1</span></div>
+            <div id="lives">LIVES: <span>❤️❤️❤️</span></div>
+        </div>
+
+        <!-- Back Button -->
+        <a href="index.html" id="backBtn">← Back</a>
+
+        <!-- Power-up Indicator -->
+        <div id="powerUpIndicator">MAGNET ACTIVE!</div>
+
+        <!-- Mobile Controls -->
+        <div id="mobileControls">
+            <button class="mobile-btn" id="leftBtn">←</button>
+            <button class="mobile-btn" id="rightBtn">→</button>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="startScreen">
+            <pre class="game-title-ascii">
+ ██████╗████████╗ ██████╗ ███╗   ██╗███████╗██████╗ 
+██╔════╝╚══██╔══╝██╔═══██╗████╗  ██║██╔════╝██╔══██╗
+╚█████╗    ██║   ██║   ██║██╔██╗ ██║█████╗  ██║  ██║
+ ╚═══██╗   ██║   ██║   ██║██║╚██╗██║██╔══╝  ██║  ██║
+██████╔╝   ██║   ╚██████╔╝██║ ╚████║███████╗██████╔╝
+╚═════╝    ╚═╝    ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═════╝ 
+ █████╗ ██████╗ ███████╗                            
+██╔══██╗██╔══██╗██╔════╝                            
+███████║██████╔╝█████╗                              
+██╔══██║██╔═══╝ ██╔══╝                              
+██║  ██║██║     ███████╗                            
+╚═╝  ╚═╝╚═╝     ╚══════╝                            
+████████╗██╗  ██╗███████╗ ██████╗ ██████╗ ██╗   ██╗
+╚══██╔══╝██║  ██║██╔════╝██╔═══██╗██╔══██╗╚██╗ ██╔╝
+   ██║   ███████║█████╗  ██║   ██║██████╔╝ ╚████╔╝ 
+   ██║   ██╔══██║██╔══╝  ██║   ██║██╔══██╗  ╚██╔╝  
+   ██║   ██║  ██║███████╗╚██████╔╝██║  ██║   ██║   
+   ╚═╝   ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   
+            </pre>
+            <p class="game-subtitle">MUSHROOM CATCHER</p>
+            <div class="instructions">
+                <p><span>←  →</span> or <span>A  D</span> to move</p>
+                <p>Catch <span>🍄 mushrooms</span> to expand consciousness!</p>
+                <p>Grab <span>⭐ stars</span> for magnet power-up</p>
+                <p>Avoid <span>🪨 space rocks</span> - they hurt!</p>
+                <p>Speed increases each level!</p>
+            </div>
+            <button class="start-btn" id="startBtn">START GAME</button>
+            <a href="index.html"><button class="home-btn">← Back to Site</button></a>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen">
+            <h1 class="game-title">GAME OVER</h1>
+            <p class="game-subtitle">The ape needs more mushrooms...</p>
+            <div class="final-score" id="finalScore">0</div>
+            <p class="high-score">HIGH SCORE: <span id="highScore">0</span></p>
+            <button class="restart-btn" id="restartBtn">PLAY AGAIN</button>
+            <a href="index.html"><button class="home-btn">← Back to Site</button></a>
+        </div>
+    </div>
+
+    <script>
+        // Generate stars
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.width = Math.random() * 3 + 1 + 'px';
+            star.style.height = star.style.width;
+            star.style.animationDelay = Math.random() * 2 + 's';
+            starsContainer.appendChild(star);
+        }
+
+        // Game variables
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let gameRunning = false;
+        let score = 0;
+        let level = 1;
+        let lives = 3;
+        let highScore = localStorage.getItem('spaceApeHighScore') || 0;
+        let magnetActive = false;
+        let magnetTimer = 0;
+
+        // Resize canvas
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Player (Ape)
+        const player = {
+            x: 0,
+            y: 0,
+            width: 80,
+            height: 70,
+            speed: 8,
+            velocityX: 0
+        };
+
+        // Initialize player position
+        function initPlayer() {
+            player.x = canvas.width / 2 - player.width / 2;
+            player.y = canvas.height - player.height - 100;
+        }
+
+        // Items arrays
+        let mushrooms = [];
+        let badMushrooms = [];
+        let powerUps = [];
+
+        // Spawn timers
+        let mushroomTimer = 0;
+        let badMushroomTimer = 0;
+        let powerUpTimer = 0;
+
+        // Input handling
+        const keys = {
+            left: false,
+            right: false
+        };
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') keys.left = true;
+            if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') keys.right = true;
+        });
+
+        document.addEventListener('keyup', (e) => {
+            if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') keys.left = false;
+            if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') keys.right = false;
+        });
+
+        // Mobile controls
+        const leftBtn = document.getElementById('leftBtn');
+        const rightBtn = document.getElementById('rightBtn');
+
+        leftBtn.addEventListener('touchstart', (e) => { e.preventDefault(); keys.left = true; });
+        leftBtn.addEventListener('touchend', (e) => { e.preventDefault(); keys.left = false; });
+        rightBtn.addEventListener('touchstart', (e) => { e.preventDefault(); keys.right = true; });
+        rightBtn.addEventListener('touchend', (e) => { e.preventDefault(); keys.right = false; });
+
+        // Spawn functions
+        function spawnMushroom() {
+            mushrooms.push({
+                x: Math.random() * (canvas.width - 40),
+                y: -40,
+                width: 40,
+                height: 40,
+                speed: 2 + level * 0.5,
+                rotation: 0
+            });
+        }
+
+        function spawnBadMushroom() {
+            badMushrooms.push({
+                x: Math.random() * (canvas.width - 40),
+                y: -40,
+                width: 40,
+                height: 40,
+                speed: 3 + level * 0.3,
+                rotation: 0
+            });
+        }
+
+        function spawnPowerUp() {
+            powerUps.push({
+                x: Math.random() * (canvas.width - 30),
+                y: -30,
+                width: 30,
+                height: 30,
+                speed: 2,
+                rotation: 0
+            });
+        }
+
+        // Collision detection
+        function checkCollision(obj1, obj2) {
+            return obj1.x < obj2.x + obj2.width &&
+                   obj1.x + obj1.width > obj2.x &&
+                   obj1.y < obj2.y + obj2.height &&
+                   obj1.y + obj1.height > obj2.y;
+        }
+
+        // Draw functions
+        // Load player image
+        const playerImg = new Image();
+        playerImg.src = 'SAT.png';
+
+        function drawPlayer() {
+            ctx.save();
+            
+            // Glow effect
+            ctx.shadowColor = '#8000ff';
+            ctx.shadowBlur = magnetActive ? 30 : 15;
+            
+            // Draw the SAT.png logo as player
+            ctx.drawImage(playerImg, player.x, player.y, player.width, player.height);
+            
+            ctx.restore();
+        }
+
+        function drawMushroom(m) {
+            ctx.save();
+            ctx.translate(m.x + m.width / 2, m.y + m.height / 2);
+            
+            ctx.shadowColor = '#ff00ff';
+            ctx.shadowBlur = 10;
+            
+            // Draw ASCII mushroom
+            ctx.font = 'bold 10px Courier New';
+            ctx.fillStyle = '#ff00ff';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            const shroomArt = [
+                ' ___ ',
+                '(o o)',
+                ' ||| '
+            ];
+            
+            const lineHeight = 10;
+            const startY = -((shroomArt.length * lineHeight) / 2);
+            
+            shroomArt.forEach((line, i) => {
+                ctx.fillText(line, 0, startY + (i * lineHeight));
+            });
+            
+            ctx.restore();
+        }
+
+        function drawBadMushroom(m) {
+            ctx.save();
+            ctx.translate(m.x + m.width / 2, m.y + m.height / 2);
+            
+            ctx.shadowColor = '#ff0000';
+            ctx.shadowBlur = 15;
+            
+            // Draw ASCII asteroid/rock
+            ctx.font = 'bold 10px Courier New';
+            ctx.fillStyle = '#ff0000';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            const rockArt = [
+                ' /\\ ',
+                '/##\\',
+                '\\##/',
+                ' \\/ '
+            ];
+            
+            const lineHeight = 8;
+            const startY = -((rockArt.length * lineHeight) / 2);
+            
+            rockArt.forEach((line, i) => {
+                ctx.fillText(line, 0, startY + (i * lineHeight));
+            });
+            
+            ctx.restore();
+        }
+
+        function drawPowerUp(p) {
+            ctx.save();
+            ctx.translate(p.x + p.width / 2, p.y + p.height / 2);
+            ctx.rotate(p.rotation);
+            
+            ctx.shadowColor = '#00ffff';
+            ctx.shadowBlur = 20;
+            
+            // Draw ASCII star
+            ctx.font = 'bold 12px Courier New';
+            ctx.fillStyle = '#00ffff';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            const starArt = [
+                ' * ',
+                '***',
+                ' * '
+            ];
+            
+            const lineHeight = 10;
+            const startY = -((starArt.length * lineHeight) / 2);
+            
+            starArt.forEach((line, i) => {
+                ctx.fillText(line, 0, startY + (i * lineHeight));
+            });
+            
+            ctx.restore();
+        }
+
+        // Update UI
+        function updateUI() {
+            document.querySelector('#score span').textContent = score;
+            document.querySelector('#level span').textContent = level;
+            
+            let heartsHTML = '';
+            for (let i = 0; i < lives; i++) heartsHTML += '❤️';
+            document.querySelector('#lives span').textContent = heartsHTML || '💀';
+        }
+
+        // Game loop
+        function gameLoop() {
+            if (!gameRunning) return;
+
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Update player
+            if (keys.left) player.velocityX = -player.speed;
+            else if (keys.right) player.velocityX = player.speed;
+            else player.velocityX *= 0.8;
+
+            player.x += player.velocityX;
+
+            // Keep player in bounds
+            if (player.x < 0) player.x = 0;
+            if (player.x + player.width > canvas.width) player.x = canvas.width - player.width;
+
+            // Spawn items
+            mushroomTimer++;
+            badMushroomTimer++;
+            powerUpTimer++;
+
+            if (mushroomTimer > 60 - level * 5) {
+                spawnMushroom();
+                mushroomTimer = 0;
+            }
+
+            if (badMushroomTimer > 120 - level * 3 && level > 1) {
+                spawnBadMushroom();
+                badMushroomTimer = 0;
+            }
+
+            if (powerUpTimer > 600) {
+                spawnPowerUp();
+                powerUpTimer = 0;
+            }
+
+            // Update and draw mushrooms
+            mushrooms = mushrooms.filter(m => {
+                m.y += m.speed;
+                m.rotation += 0.02;
+
+                // Magnet effect
+                if (magnetActive) {
+                    const dx = player.x + player.width / 2 - (m.x + m.width / 2);
+                    m.x += dx * 0.05;
+                }
+
+                // Check collision
+                if (checkCollision(player, m)) {
+                    score += 10;
+                    if (score % 100 === 0) level++;
+                    updateUI();
+                    return false;
+                }
+
+                // Remove if off screen
+                if (m.y > canvas.height) return false;
+
+                drawMushroom(m);
+                return true;
+            });
+
+            // Update and draw bad mushrooms
+            badMushrooms = badMushrooms.filter(m => {
+                m.y += m.speed;
+                m.rotation -= 0.03;
+
+                // Check collision
+                if (checkCollision(player, m)) {
+                    lives--;
+                    updateUI();
+                    if (lives <= 0) {
+                        gameOver();
+                    }
+                    return false;
+                }
+
+                // Remove if off screen
+                if (m.y > canvas.height) return false;
+
+                drawBadMushroom(m);
+                return true;
+            });
+
+            // Update and draw power-ups
+            powerUps = powerUps.filter(p => {
+                p.y += p.speed;
+                p.rotation += 0.05;
+
+                // Check collision
+                if (checkCollision(player, p)) {
+                    magnetActive = true;
+                    magnetTimer = 300; // 5 seconds at 60fps
+                    document.getElementById('powerUpIndicator').classList.add('active');
+                    return false;
+                }
+
+                // Remove if off screen
+                if (p.y > canvas.height) return false;
+
+                drawPowerUp(p);
+                return true;
+            });
+
+            // Update magnet timer
+            if (magnetActive) {
+                magnetTimer--;
+                if (magnetTimer <= 0) {
+                    magnetActive = false;
+                    document.getElementById('powerUpIndicator').classList.remove('active');
+                }
+            }
+
+            // Draw player
+            drawPlayer();
+
+            requestAnimationFrame(gameLoop);
+        }
+
+        // Game over
+        function gameOver() {
+            gameRunning = false;
+
+            if (score > highScore) {
+                highScore = score;
+                localStorage.setItem('spaceApeHighScore', highScore);
+            }
+
+            document.getElementById('finalScore').textContent = score;
+            document.getElementById('highScore').textContent = highScore;
+            document.getElementById('gameOverScreen').style.display = 'flex';
+        }
+
+        // Start game
+        function startGame() {
+            score = 0;
+            level = 1;
+            lives = 3;
+            mushrooms = [];
+            badMushrooms = [];
+            powerUps = [];
+            magnetActive = false;
+            mushroomTimer = 0;
+            badMushroomTimer = 0;
+            powerUpTimer = 0;
+
+            initPlayer();
+            updateUI();
+
+            document.getElementById('startScreen').style.display = 'none';
+            document.getElementById('gameOverScreen').style.display = 'none';
+
+            gameRunning = true;
+            gameLoop();
+        }
+
+        // Event listeners
+        document.getElementById('startBtn').addEventListener('click', startGame);
+        document.getElementById('restartBtn').addEventListener('click', startGame);
+
+        // Initialize
+        initPlayer();
+        document.getElementById('highScore').textContent = highScore;
+    </script>
+</body>
+</html>

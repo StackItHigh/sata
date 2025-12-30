@@ -1,0 +1,28 @@
+{
+  "name": "stoned-ape-theory",
+  "version": "1.0.0",
+  "description": "Terence McKenna's Oracle - The Stoned Ape Theory Terminal",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "terence-mckenna",
+    "stoned-ape-theory",
+    "psychedelic",
+    "consciousness",
+    "philosophy"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

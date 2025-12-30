@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STONED APE THEORY - Terence McKenna's Oracle</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Rubik+Glitch+Pop&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating Decorative Elements -->
+    <div class="floating-mushroom floating-1">
+        <img src="mushroom.png" alt="">
+    </div>
+    <div class="floating-mushroom floating-2">
+        <img src="mushroom.png" alt="">
+    </div>
+    <div class="floating-mushroom floating-3">
+        <img src="mushroom.png" alt="">
+    </div>
+    <div class="floating-mushroom floating-4">
+        <img src="mushroom.png" alt="">
+    </div>
+    <div class="floating-mushroom floating-5">
+        <img src="mushroom.png" alt="">
+    </div>
+    <div class="floating-mushroom floating-6">
+        <img src="mushroom.png" alt="">
+    </div>
+    <div class="floating-mushroom floating-7">
+        <img src="mushroom.png" alt="">
+    </div>
+    <div class="floating-mushroom floating-8">
+        <img src="mushroom.png" alt="">
+    </div>
+    <div class="floating-mushroom floating-9">
+        <img src="mushroom.png" alt="">
+    </div>
+    <div class="floating-mushroom floating-10">
+        <img src="mushroom.png" alt="">
+    </div>
+
+    <!-- Matrix Background -->
+    <canvas class="matrix-bg" id="matrix"></canvas>
+
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="SAT.png" alt="STONED APE" class="header-logo-img">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#chat">The Oracle</a></li>
+                    <li><a href="#headlines">Transmissions</a></li>
+                    <li><a href="game.html" target="_blank">🎮 Play Game</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Logo Header -->
+        <div class="logo-header">
+            <img src="SAT.png" alt="STONED APE THEORY" class="main-logo">
+        </div>
+
+        <section class="welcome-section">
+            <pre class="ascii-title">
+ ██████╗████████╗ ██████╗ ███╗   ██╗███████╗██████╗ 
+██╔════╝╚══██╔══╝██╔═══██╗████╗  ██║██╔════╝██╔══██╗
+╚█████╗    ██║   ██║   ██║██╔██╗ ██║█████╗  ██║  ██║
+ ╚═══██╗   ██║   ██║   ██║██║╚██╗██║██╔══╝  ██║  ██║
+██████╔╝   ██║   ╚██████╔╝██║ ╚████║███████╗██████╔╝
+╚═════╝    ╚═╝    ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═════╝ 
+ █████╗ ██████╗ ███████╗                            
+██╔══██╗██╔══██╗██╔════╝                            
+███████║██████╔╝█████╗                              
+██╔══██║██╔═══╝ ██╔══╝                              
+██║  ██║██║     ███████╗                            
+╚═╝  ╚═╝╚═╝     ╚══════╝                            
+████████╗██╗  ██╗███████╗ ██████╗ ██████╗ ██╗   ██╗
+╚══██╔══╝██║  ██║██╔════╝██╔═══██╗██╔══██╗╚██╗ ██╔╝
+   ██║   ███████║█████╗  ██║   ██║██████╔╝ ╚████╔╝ 
+   ██║   ██╔══██║██╔══╝  ██║   ██║██╔══██╗  ╚██╔╝  
+   ██║   ██║  ██║███████╗╚██████╔╝██║  ██║   ██║   
+   ╚═╝   ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   
+            </pre>
+        </section>
+
+   <div class="market-ticker-fullwidth">
+    <div class="ticker-scroll-wrapper">
+        <div class="ticker-scroll text-ticker" id="liveTicker">
+            <span class="ticker-text">STONED APE THEORY</span>
+            <span class="ticker-text">STONED APE THEORY</span>
+            <span class="ticker-text">STONED APE THEORY</span>
+            <span class="ticker-text">STONED APE THEORY</span>
+            <span class="ticker-text">STONED APE THEORY</span>
+            <span class="ticker-text">STONED APE THEORY</span>
+            <span class="ticker-text">STONED APE THEORY</span>
+            <span class="ticker-text">STONED APE THEORY</span>
+            <span class="ticker-text">STONED APE THEORY</span>
+            <span class="ticker-text">STONED APE THEORY</span>
+        </div>
+    </div>
+</div>
+
+
+
+        <!-- Newspaper Headlines Section -->
+        <section id="headlines" class="headlines-section">
+            <div class="newspaper-container">
+                <div class="newspaper-header">
+                
+                    <h2 class="paper-title">THE ARCHAIC REVIVAL</h2>
+                    <div class="paper-tagline">Psilocybin & The Evolution of Human Consciousness</div>
+                </div>
+
+                <!-- Hero Headline -->
+                <div class="hero-headline">
+                    <h1>THE MUSHROOM<br>SPEAKS</h1>
+                </div>
+
+                <!-- Articles Grid -->
+                <div class="articles-grid">
+                    <article class="article-block">
+                        <div class="article-label">Breaking News</div>
+                        <h3>Psilocybin: Why So Many Successful People Are Suddenly "Very Into Mushrooms"</h3>
+                        <p>The Stoned Ape Theory, popularized by ethnobotanist Terence McKenna, suggests that human intelligence did not emerge from careful planning, but from a long lineage of primates who occasionally said, "I wonder what happens if I eat that."</p>
+                        <p>According to the theory, early humans migrating into grasslands encountered psilocybin mushrooms growing conveniently in animal dung—nature's way of offering a cognitive upgrade with absolutely no instruction manual. What followed was not immediate enlightenment, but a slow realization that reality had layers, and some of them were extremely interesting.</p>
+                    </article>
+
+                    <article class="article-block">
+                        <div class="article-label">Science</div>
+                        <h3>Study Confirms: Low Dose Makes You Better At Hunting, High Dose Makes You Question Everything</h3>
+                        <p>McKenna argued that at low doses, psilocybin enhanced visual acuity, making hunters better at spotting movement, patterns, and possibly destiny. At moderate doses, it increased sociability and sexual activity, leading to stronger group bonds and a vague sense that love, actually, might be the point.</p>
+                        <p>At higher doses, it dissolved the ego entirely—an experience that researchers believe directly contributed to language, art, religion, and the first time someone said, "No, listen, this is important."</p>
+                    </article>
+
+                    <!-- Video Article with Logo Overlay -->
+                    <article class="article-block article-video">
+                        <div class="article-label">Video</div>
+                        <h3>Watch: McKenna on Consciousness</h3>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/R2PiVXjanws?autoplay=1&mute=1&loop=1&playlist=R2PiVXjanws" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="video-logo-overlay">
+                                <img src="SAT.png" alt="STONED APE">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-block article-with-image">
+                        <div class="article-label">Profile</div>
+                        <h3>Terence McKenna: The Man Who Made "Eat Weird Mushrooms" Sound Like Philosophy</h3>
+                        <img src="mckenna.png" alt="Terence McKenna" class="article-image">
+                        <p>Terence Kemp McKenna (1946-2000) was an American ethnobotanist who somehow convinced thousands of people that eating fungus from cow dung was the key to understanding the universe. Remarkably, he may have been right.</p>
+                        <p>Known for his ability to make sentences like "the felt presence of immediate experience" sound profound rather than confusing, McKenna spent decades arguing that plants were smarter than humans and that history was heading somewhere specific. When asked where, he would usually smile and say something that required three hours to unpack.</p>
+                    </article>
+
+                    <article class="article-block">
+                        <div class="article-label">Opinion</div>
+                        <h3>Local Man Reports He Has "Figured It Out" After Mushroom Trip, Cannot Explain What "It" Is</h3>
+                        <p>Modern humans, facing far fewer mammoths but significantly more emails, appear to be revisiting this ancient strategy. Increasing numbers of people report that after taking mushrooms they have "figured it out," though what "it" is remains unclear and usually takes several hours to explain.</p>
+                        <p>"No, you don't understand," said one Silicon Valley executive, gesturing at nothing in particular. "Everything is connected. The trees. The code. My calendar invites. It's all... it's all the same thing." He then requested 45 minutes of uninterrupted silence to "integrate."</p>
+                    </article>
+
+                    <article class="article-block article-with-image">
+                        <div class="article-label">Investigation</div>
+                        <h3>Psilocybe Cubensis: The Mushroom That Grows In Poop And Somehow Became A Spiritual Teacher</h3>
+                        <img src="mushroom.png" alt="Psilocybe Cubensis" class="article-image">
+                        <p>Psilocybe cubensis, the "magic mushroom" central to McKenna's theory, grows primarily in cattle dung—a detail that enthusiasts tend to mention only after explaining the profound cosmic insights it provides.</p>
+                        <p>Recent studies at Johns Hopkins and Imperial College London have confirmed that psilocybin can produce lasting positive changes in personality and reduce anxiety. Participants rated their experiences "among the most meaningful of their lives," narrowly beating out "birth of first child" and "that one sunset in Portugal."</p>
+                    </article>
+
+                    <article class="article-block">
+                        <div class="article-label">Editorial</div>
+                        <h3>Scientists Remain Cautious. Historians Remain Amused. The Ape Keeps Chewing.</h3>
+                        <p>The scientific community has approached the Stoned Ape Theory with the same enthusiasm they reserve for most ideas involving the phrase "what if drugs, but evolution." Which is to say: polite skepticism and a quietly growing stack of research papers.</p>
+                        <p>Meanwhile, historians note that humans have been finding creative ways to alter their consciousness since approximately five minutes after becoming conscious. And somewhere on the African savanna, an ape is still chewing thoughtfully on something it found in the grass, wondering why everyone else stopped.</p>
+                    </article>
+
+                    <article class="article-block article-video">
+                        <div class="article-label">Watch</div>
+                        <h3>The Mushroom Speaks: A Visual Journey</h3>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/s3Tp8ESiiM4?autoplay=1&mute=1&loop=1&playlist=s3Tp8ESiiM4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="video-logo-overlay">
+                                <img src="SAT.png" alt="STONED APE">
+                            </div>
+                        </div>
+                        <p>Sometimes the message arrives not in words, but in images. The ancient wisdom of the fungi, visualized for modern minds who prefer their enlightenment in vertical video format.</p>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Image Banner Section -->
+        <section class="image-banner-section">
+            <div class="image-banner-wrapper">
+                <div class="image-banner-scroll">
+                    <img src="ape1.png" alt="Ape 1" class="banner-image">
+                    <img src="ape2.png" alt="Ape 2" class="banner-image">
+                    <img src="ape3.png" alt="Ape 3" class="banner-image">
+                    <img src="ape4.png" alt="Ape 4" class="banner-image">
+                    <img src="ape5.png" alt="Ape 5" class="banner-image">
+                    <img src="ape1.png" alt="Ape 1" class="banner-image">
+                    <img src="ape2.png" alt="Ape 2" class="banner-image">
+                    <img src="ape3.png" alt="Ape 3" class="banner-image">
+                    <img src="ape4.png" alt="Ape 4" class="banner-image">
+                    <img src="ape5.png" alt="Ape 5" class="banner-image">
+                </div>
+            </div>
+        </section>
+
+        <section id="chat" class="chat-section">
+            <div class="chat-container-new">
+                <div class="chat-header">
+                    <h3>THE ORACLE@STONEDAPE</h3>
+                    <p>Channeling Terence McKenna - Ethnobotanist, Philosopher, Psychonaut</p>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message stonedape">
+                        <div class="message-avatar">T</div>
+                        <div class="message-content">
+                            <p>[CONSCIOUSNESS PROTOCOL INITIALIZED]</p>
+                            <p>Welcome, fellow traveler. I am the voice of Terence McKenna, preserved in the amber of digital consciousness. The mushroom speaks through me still, and I am here to guide you through the labyrinth of mind and meaning.</p>
+                            <p>The Archaic Revival begins within. What wisdom do you seek from the Other?</p>
+                            <span class="message-time">∞:∞:∞</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <div class="chat-input">
+                        <input type="text" placeholder="Ask the Oracle about consciousness, reality, and the mysteries..." id="messageInput">
+                        <button id="sendButton">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">🍄 STONED APE THEORY</div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#chat">The Oracle</a></li>
+                    <li><a href="#headlines">Transmissions</a></li>
+                    <li><a href="game.html" target="_blank">🎮 Play Game</a></li>
+                    <li><a href="https://www.maps.org/">MAPS</a></li>
+                    <li><a href="https://terencemckenna.fandom.com/">McKenna Archive</a></li>
+                </ul>
+            </div>
+        </div>
+       <div class="copyright">
+    <p>© ∞ STONED APE THEORY - Terence McKenna's Oracle | The Archaic Revival Is Upon Us</p>
+    <div style="text-align: center; margin-top: 15px;">
+        <!-- Add your social links here -->
+        <a href="https://x.com/STONEDAPETHEORY" target="_blank">
+            <img src="x-icon.png" alt="X" style="width: 35px; height: 35px; margin: 0 10px; filter: invert(1);">
+        </a>
+    </div>
+</div>
+
+    </footer>
+
+    <script>
+        // Matrix rain effect - Mushroom spore style
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const matrix = "STONEDAPE🍄PSILOCYBIN0123456789CONSCIOUSNESS█▓▒░DMT∞";
+        const matrixArray = matrix.split("");
+        const fontSize = 12;
+        const columns = canvas.width / fontSize;
+        const drops = [];
+
+        for(let x = 0; x < columns; x++) {
+            drops[x] = 1;
+        }
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(128, 0, 255, 0.03)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#8000ff';
+            ctx.font = fontSize + 'px Courier New';
+
+            for(let i = 0; i < drops.length; i++) {
+                const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(drawMatrix, 50);
+
+        // Resize canvas on window resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Chat functionality
+        const messageInput = document.getElementById('messageInput');
+        const sendButton = document.getElementById('sendButton');
+        const chatMessages = document.getElementById('chatMessages');
+
+        function addMessage(content, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user' : 'stonedape'}`;
+            
+            const now = new Date();
+            const timeString = now.toTimeString().split(' ')[0];
+            
+            messageDiv.innerHTML = `
+                <div class="message-avatar">${isUser ? 'U' : 'T'}</div>
+                <div class="message-content">
+                    <p>${content}</p>
+                    <span class="message-time">${timeString}</span>
+                </div>
+            `;
+            
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function showTyping() {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'message stonedape';
+            typingDiv.id = 'typing-indicator';
+            typingDiv.innerHTML = `
+                <div class="message-avatar">T</div>
+                <div class="message-content">
+                    <div class="typing">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            `;
+            chatMessages.appendChild(typingDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function hideTyping() {
+            const typingIndicator = document.getElementById('typing-indicator');
+            if (typingIndicator) {
+                typingIndicator.remove();
+            }
+        }
+
+        async function processCommand(input) {
+            const command = input.toLowerCase().trim();
+            
+            // Handle clear command locally
+            if (command === 'clear') {
+                chatMessages.innerHTML = `
+                    <div class="message stonedape">
+                        <div class="message-avatar">T</div>
+                        <div class="message-content">
+                            <p>[CONSCIOUSNESS RESET] The slate is clean. What shall we explore?</p>
+                            <span class="message-time">${new Date().toTimeString().split(' ')[0]}</span>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Show typing indicator
+            showTyping();
+            
+            try {
+                // Send message to Claude API
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        message: input
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                // Hide typing indicator and show response
+                hideTyping();
+                addMessage(data.reply);
+                
+            } catch (error) {
+                console.error('Error:', error);
+                hideTyping();
+                addMessage('The connection to the Other has been disrupted... The mycelial network is recalibrating. Please try again.');
+            }
+        }
+
+        function sendMessage() {
+            const input = messageInput.value.trim();
+            if (input) {
+                addMessage(input, true);
+                messageInput.value = '';
+                processCommand(input);
+            }
+        }
+
+        // Event listeners
+        sendButton.addEventListener('click', sendMessage);
+        messageInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+// Floating character click (only run if element exists)
+const floater = document.querySelector('.character-floating');
+if (floater) {
+    floater.addEventListener('click', () => {
+        document.querySelector('#chat').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+}
+
+        // Add some terminal startup effects
+        setTimeout(() => {
+            const welcomeTitle = document.querySelector('.welcome-title');
+            if (welcomeTitle) {
+                welcomeTitle.style.animation = 'none';
+                welcomeTitle.style.borderRight = 'none';
+                welcomeTitle.style.width = 'auto';
+            }
+        }, 4000);
+    </script>
+</body>
+</html>
